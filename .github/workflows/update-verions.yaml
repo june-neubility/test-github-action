@@ -5,6 +5,7 @@ on:
 
 jobs:
   generate:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,5 +26,4 @@ jobs:
         with:
           title: ${{ steps.sem_vers.outputs.patch }}
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-
+          GITHUB_TOKEN: "${{ secrets.TOKEN }}"
